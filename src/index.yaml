@@ -1,0 +1,5 @@
+ProjectTitle: jqestate
+
+PageList:
+- file: homepage.html
+  ready: 20

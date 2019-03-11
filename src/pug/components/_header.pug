@@ -1,0 +1,70 @@
+// HEADER :: START
+
+header.header
+  .container.container--not-relative.container--wide-desktop
+    .header__block-wrp.header__block-wrp--close-menu
+      .header__item.header__item--hidden-to-md
+        //- .header__fav(data-count='0')
+      .header__item.logo-m
+        a.header__logo-new(href='/')
+          img.desktop(src="img/logotype.svg", alt="")
+          img.mobile(src="img/logotype-mobile.svg", alt="")
+        .nav     
+          .nav__item
+            a.nav__link(href="#") Аренда
+            .nav-dropdown
+              .container
+                .nav-dropdown__block-wrp
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href="#")
+                    .nav-dropdown__img(style='background-image: url(/img/menu-houses.jpg);')
+                    .nav-dropdown__text Дом
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href='#')
+                    .nav-dropdown__img(style='background-image: url(/img/menu-flats.jpg);')
+                    .nav-dropdown__text Квартира
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href='#')
+                    .nav-dropdown__img(style='background-image: url(/img/menu-townhouses.jpg);')
+                    .nav-dropdown__text Таунхаус
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href='#')
+                    .nav-dropdown__img(style='background-image: url(/img/menu-lands.jpg);')
+                    .nav-dropdown__text Участок          
+          .nav__item
+            a.nav__link(href="#") Продажа
+            .nav-dropdown
+              .container
+                .nav-dropdown__block-wrp
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href="#")
+                    .nav-dropdown__img(style='background-image: url(/img/menu-houses.jpg);')
+                    .nav-dropdown__text Дом
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href="#")
+                    .nav-dropdown__img(style='background-image: url(/img/menu-flats.jpg);')
+                    .nav-dropdown__text Квартира
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href="#")
+                    .nav-dropdown__img(style='background-image: url(/img/menu-townhouses.jpg);')
+                    .nav-dropdown__text Таунхаус
+                  .nav-dropdown__item
+                    a.nav-dropdown__link(href="#")
+                    .nav-dropdown__img(style='background-image: url(/img/menu-lands.jpg);')
+                    .nav-dropdown__text Участок
+          .nav__item
+            a.nav__link(href='#') Поселки
+          .nav__item
+            a.nav__link(href='#') О компании
+      .header__item.hamburger-m
+        a.header__phone(href='tel:+74959683505') +7 (495) 968-35-05
+        a.button.button--green.header__callback(href='#popup-callback') Обратный звонок
+        .header__button.header__button-menu(style='')
+          .header__button-line-wrp
+            span
+            span
+            span
+            span
+        button#btn_test(style='display: none;') test_pup
+
+// HEADER :: END

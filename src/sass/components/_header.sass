@@ -1,0 +1,958 @@
+// /* HEADER
+// .header
+//   position: fixed
+//   top: 0
+//   right: 0
+//   left: 0
+//   background: #fff
+//   height: auto
+//   z-index: 100
+//   border-bottom: 1px solid #ececec
+//   &__wrapper
+//     display: flex
+//     align-items: center
+//     justify-content: space-between
+//   .hamburger
+//     display: none
+//   &__logotype
+//     font-size: 0
+//     position: relative
+//     z-index: 2
+//     margin-bottom: -1px
+//     img
+//       width: 217px
+//       height: auto
+//       &.mobile
+//         display: none
+//   &__menu
+//     // margin-right: -20px
+//   &__menu-link
+//     font-size: 18px
+//     color: #000000
+//     font-weight: 400
+//     display: inline-block
+//     margin: 0 15px
+//     position: relative
+//     transition: all $transitionSpeed $ease
+//     &:hover
+//       color: #ff4c4e
+//   &__log-out
+//     display: flex
+//     align-items: center
+//     justify-content: flex-end
+//     padding-right: 1px
+//     p
+//       font-size: 15px
+//       color: #959595
+//       line-height: 1.2
+//       // font-weight: 00
+//   &__log-image
+//     font-size: 0
+//     margin-left: 19px
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     border-radius: 50%
+//     width: 50px
+//     height: 50px
+//     overflow: hidden
+//     background: $green
+//     transition: all $transitionSpeed $ease
+//     &:hover
+//       background: $greenHover
+//     &-container
+//       font-size: 0
+//     img
+//       width: auto
+//       height: 25px
+//       margin-left: -3px
+//   &__name
+//     text-align: right
+
+// +r($desktop)
+//   .header
+//     &__logotype
+//       img
+//         width: 160px
+//     &__menu-link
+//       font-size: 17px
+//       margin: 0 12px
+//     &__log-image
+//       width: 40px
+//       height: 40px
+//       margin-left: 15px
+//       img
+//         height: 18px
+
+// +r($tablet)
+//   .header
+//     &__wrapper
+//       padding: 15px 0
+//       justify-content: center
+//       position: relative
+//       z-index: 4
+//       &.is-active
+//         .header__menu
+//           transform: translateX(0)
+//           opacity: 1
+//         .header__log-out
+//           transform: translateX(0)
+//           opacity: 1
+//           transition: all 0.5s $ease
+//         .header__menu-link
+//           opacity: 1
+//           transform: translateX(0)
+//     &__logotype
+//       position: relative
+//       z-index: 4
+//       img
+//         height: 20px
+//         width: auto
+//         &.desktop
+//           display: none
+//         &.mobile
+//           display: block
+//     &__menu
+//       height: calc(100vh - 50px)
+//       position: absolute
+//       background: #fff
+//       width: calc(100% + 40px)
+//       z-index: 1
+//       top: 50px
+//       left: -20px
+//       padding: 40px
+
+//       transition: all $transitionSpeed $ease
+//       transform: translateX(101%)
+//       // opacity: 0
+//     &__menu-link
+//       width: 100%
+//       display: block
+//       margin: 0 0 24px 0
+//       font-size: 18px
+//       opacity: 0
+//       transform: translateX(101%)
+//       transition: all 0.5s $ease
+//     &__log-out
+//       position: absolute
+//       top: 240px
+//       z-index: 4
+//       left: -20px
+//       text-align: left
+//       width: 100%
+//       padding-left: 40px
+//       justify-content: flex-start
+//       transition: all $transitionSpeed $ease
+//       transform: translateX(101%)
+//       opacity: 0
+//       &:before
+//         position: absolute
+//         display: block
+//         content: ''
+//         width: 80px
+//         height: 1px
+//         background: #ececec
+//         top: -20px
+//         left: 40px
+//     &__name
+//       text-align: left
+//     &__log-image
+//       margin-left: auto
+//       margin-right: -20px
+//     .hamburger
+//       display: block
+//       order: 4
+//       padding: 0
+//       margin-right: 0px
+//       width: 18px
+//       height: 16px
+//       opacity: 1
+//       position: absolute
+//       z-index: 4
+//       right: 0px
+//       // outline: 1px solid red
+//       overflow: hidden
+//       .hamburger-inner
+//         border-radius: 0
+//         background: #000
+//         width: 18px
+//         height: 2px
+//         top: 4px
+//         &:before,
+//         &:after
+//           border-radius: 0
+//           background: #000
+//           width: 100%
+//           height: 2px
+//           width: 18px
+//         &:before
+//           top: 6px
+//         &:after
+//           top: 12px
+//       &.is-active
+//         .hamburger-inner
+//           top: -1px
+//           &:after
+//             top: 20px
+//             left: 0px
+
+@media only screen and (max-width: 768px)
+  div
+    &.logo-m
+      position: absolute
+      left: calc(50% - 79.5px)
+    &.hamburger-m
+      right: 0px
+      position: absolute
+  .header__item--hidden-to-md
+    display: none
+  .header__logo-new
+    margin-left: 0px !important
+  .text_button
+    position: absolute
+    /*margin: auto;
+    width: inherit
+    /*vertical-align: middle;
+    height: 14px
+    top: 50%
+    margin-top: -7px
+  .detail-pagination__arrow--next, .detail-pagination__arrow--prev
+    height: 35px
+    width: 130px
+  button, input
+    overflow: unset
+  button, input, optgroup, select, textarea
+    font-size: 0.95em
+  .footer__header
+    padding-bottom: 20px
+    margin-bottom: 20px
+  .footer__link--padding-top:nth-child(1)
+    padding-top: 0px
+  .margin--footer-top
+    margin-top: 35px
+  .footer__link--padding-bottom
+    padding-bottom: 6px
+  .padding--bottom-menu-b
+    padding-bottom: 5px
+  .margin-bottom--rm
+    margin-bottom: 0px
+  .footer__link--padding-top-z
+    padding-top: 15px
+  .switch
+    switch-detail1
+      width: 100px
+    &::before
+      width: 90px
+      height: 28px
+      border-radius: 14px
+      left: unset
+      top: 0px
+      right: -3px
+  .switch__label_one, .switch__label_two, .switch__label_three
+    /*padding: 0 7px;
+     *height: 25px;
+     *top: 2px;
+    padding: 2px 0 0 0
+    height: 25px
+    line-height: 25px
+    /*top: 3px !important;
+    /*margin-left: 11px;
+    position: absolute
+  .switch__indicator
+    left: unset
+    right: 14px
+    width: 28px
+    height: 28px
+  .switch input
+    &#one:checked ~ .switch__indicator
+      transform: translate3d(-46px, 0, 0)
+    &#two:checked ~ .switch__indicator
+      transform: translate3d(-13px, 0, 0)
+    &#three:checked ~ .switch__indicator
+      transform: translate3d(17px, 0, 0)
+  .switch__label_one
+    right: 68px
+  .switch__label_two
+    right: 37px
+  .switch__label_three
+    right: 6px
+  .request__item-wrp
+    width: 95%
+  .request__header
+    font-size: 1.2em
+  .detail-inform__text
+    line-height: 2.2em
+    font-size: 1.0em
+    padding-right: 15px
+  .detail-inform__text--bold
+    font-size: 1.1em !important
+    padding-bottom: 10px
+    padding-top: 10px
+  .request__input, .button--big
+    width: 100%
+  .id_object-mobile
+    position: absolute
+    z-index: 3
+    background-color: #fefefe99
+    width: 80px
+    height: 35px
+    border-radius: 17.5px
+    margin-top: 8px
+    margin-left: 8px
+    line-height: 35px
+    text-align: center
+    font-size: 0.9em
+  .page
+    padding-top: 3.125rem
+  .detail-slider-mobile
+    height: 300px
+  .container-slick_gallery
+    position: absolute
+    width: 100%
+  .item-slick-slider
+    height: 300px
+    width: 100%
+    /*background-color: #eee;
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+  .sliсk_next
+    position: absolute
+    top: calc(50% - 26px)
+    right: 0px
+    height: 3.25rem
+    width: 3.25rem
+    z-index: 3
+    cursor: pointer
+    &:after
+      position: absolute
+      top: 15px
+      left: 0
+      height: 40%
+      width: 40%
+      border: .125rem solid #fff
+      border-bottom: none
+      transform: rotate(45deg)
+      border-left: none
+      transform: rotate(45deg)
+      border-left: none
+  .sliсk_prev
+    position: absolute
+    top: calc(50% - 26px)
+    height: 3.25rem
+    width: 3.25rem
+    z-index: 3
+    cursor: pointer
+    &:after
+      position: absolute
+      top: 15px
+      right: 0
+      height: 40%
+      width: 40%
+      border: .125rem solid #fff
+      border-bottom: none
+      transform: rotate(-135deg)
+      border-left: none
+  .detail-desc
+    /*padding-top: 310px;
+  .photo-counter, #lightgallery_
+    display: none
+  .settlements-header .container
+    background-color: rgba(0, 0, 0, 0.5)
+  /*About PAGE
+  .area_logic
+    /*border-bottom: 1px solid #eee;
+    padding-bottom: 35px
+    background-color: #fff
+  .first_head
+    padding-top: 45px
+    color: #252525
+    font-family: Helvetica Neue, Arial, "sans-serif"
+    font-weight: 700
+    font-size: 1.3em
+  .last-head
+    padding-top: 45px
+    color: #252525
+    font-family: Helvetica Neue, Arial, "sans-serif"
+    font-weight: 700
+    font-size: 1.3em
+    padding-top: unset
+    font-size: 1.4em
+    padding-bottom: 25px
+  .sub--head
+    font-size: 1.0em
+    font-weight: normal
+    font-family: Helvetica Neue, Arial, "sans-serif"
+  .center__
+    text-align: center
+    width: 100%
+  .small_about
+    color: #656565
+    font-size: 1.1em
+  li
+    list-style-type: none
+  .numer-principal-n1, .numer-principal-n2, .numer-principal-n3, .numer-principal-n4
+    /* width: 70px;
+    /* height: 70px;
+    border: 2px solid #ff4c4e
+    /* margin-right: 20px;
+    border-radius: 50%
+    /* margin-bottom: 20px;
+    line-height: 3.3
+    padding: 2rem 1.8rem
+    margin-right: 20px
+    font-size: 1.5em
+    font-weight: normal
+  .numer-principal-n1:after, .numer-principal-n2:after, .numer-principal-n3:after, .numer-principal-n4:after
+    content: ""
+    position: absolute
+    width: 2.65rem
+    height: 2.65rem
+    background: #fff
+    border-radius: 50%
+  .numer-principal-n2:after
+    margin-top: 42px
+  .numer-principal-n3:after
+    margin-top: 42px
+    margin-left: -53px
+  .numer-principal-n4:after
+    margin-left: -53px
+    margin-top: -5px
+  .text-list-princ
+    font-size: 1.05em
+  .border-red-padding
+    padding: 30px 20px
+    border: 2px solid #ff4c4e
+    margin: 45px 15px
+    text-align: center
+  .open_text__button
+    width: 100%
+    padding: 15px 0px
+    text-align: center
+  .usual_header
+    font-size: 2.0em
+    color: #252525
+    margin-top: 25px
+    margin-bottom: 50px
+  .sub-header-left span
+    text-align: left
+    font-weight: normal
+    margin: 28px 0px
+    line-height: 1.3
+  .inner-padding
+    /*padding: 15px;
+  .descrip_small
+    padding: 20px 0
+    font-size: 0.9em
+    line-height: 2.3
+  .overflow_hidden_text
+    overflow-y: hidden
+    height: 120px
+  .eve-_block
+    background-color: #ffffff
+    padding: 50px 15px 0px 15px
+  .odd-block
+    background-color: #fafafa
+    padding: 50px 15px 0px 15px
+  .delimeter-hr
+    margin: 30px 15px
+  .small-grey-info
+    color: #9b9b9b
+    font-size: 0.90em
+    text-align: center
+  .head-names-agent
+    span
+      font-size: 0.85em
+      font-weight: normal
+    text-align: center
+  .portrait__
+    width: 180px
+    /*text-align: center;
+    margin: 0 auto
+    position: relative
+    margin-left: -90px
+    left: 50%
+  .principal-ul
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    padding-top: 20px
+  .principal-li
+    display: inline-block
+    font-weight: 300
+    width: 100%
+    position: relative
+  .border-red-padding
+    display: flex
+    flex-wrap: wrap
+    font-size: 1.7em
+    font-weight: 400
+    padding: 2.5em 2.5em
+    border: 2px solid #ff4c4e
+    margin: 5.5em 0
+    text-align: center
+
+@media only screen and (min-width: 768px)
+  .photo-counter-mob
+    display: none
+
+ul, li
+  list-style: none
+
+.about-color
+  background-color: #fff
+
+h1.about-introduce
+  font-size: 2.8rem
+  font-weight: 700
+
+p.about-introduce
+  font-size: 1.6em
+  font-weight: 400
+
+.about-working-area
+  padding-top: 7.5rem
+  /*width: 100%;
+  text-align: center
+  width: 1170px
+  margin: auto
+
+.text-list-princ
+  display: block
+  font-size: 21px
+  font-weight: 400
+  list-style-image: none
+  list-style-position: outside
+  list-style-type: none
+
+.principal-li
+  font-weight: 300
+  width: 25%
+  position: relative
+
+.principal-ul
+  display: flex
+  flex-wrap: wrap
+  padding-top: 20px
+
+.numer-principal-n1, .numer-principal-n2, .numer-principal-n3, .numer-principal-n4
+  width: 2.65em
+  height: 2.65em
+  padding: 20px 33px
+  border: 2px solid #ff4c4e
+  border-radius: 50%
+  margin-bottom: 20px
+  line-height: 3.3
+  /*margin-right: 20px;
+  font-size: 3em
+  font-weight: normal
+
+.numer-principal-n1:after, .numer-principal-n2:after, .numer-principal-n3:after, .numer-principal-n4:after
+  content: ""
+  position: absolute
+  width: 0.85em
+  height: 0.85em
+  background: #fff
+  border-radius: 50%
+
+.numer-principal-n1:after
+  margin-left: -11px
+  margin-top: 17px
+
+.numer-principal-n2:after
+  margin-top: 91px
+
+.numer-principal-n3:after
+  margin-top: 91px
+  margin-left: -67px
+
+.numer-principal-n4:after
+  margin-left: -48px
+  margin-top: 17px
+
+.border-red-padding
+  width: 100%
+  font-size: 1.7em
+  font-weight: 400
+  padding: 2.5em 2.5em
+  border: 2px solid #ff4c4e
+  margin: 4em 0
+  text-align: center
+
+.about_block_left
+  display: block
+  width: 50%
+  padding-right: 3rem
+
+.about_block_right
+
+.description-block
+  /*width: 1170px;
+  box-sizing: border-box
+  margin: auto
+
+.about-header
+  font-size: 51px
+  font-weight: 400px
+  text-align: center
+  margin-top: 1.5em
+
+.sub-header
+  font-size: 1.8em
+  font-weight: 400
+  margin-bottom: 1rem
+  margin-top: 0px
+
+.descrip-small-text
+  color: #737373
+  font-size: 1.2em
+  font-weight: 400
+  margin-top: 1rem
+  line-height: 2.2rem
+
+.descrip-left-block
+  display: block
+  width: auto
+  margin-left: 3rem
+  margin-right: 17rem
+
+.descrip-right-block
+  display: block
+  width: auto
+  margin-right: 3rem
+
+.descrip_small_img
+  width: 23rem
+  height: 19rem
+
+.even-block
+  padding-top: 2rem
+  background-color: #f9f9f9
+
+.odd-block
+  background-color: #fff
+
+.principles-block
+  width: 1170px
+  margin: auto
+  padding-top: 4rem
+  padding-bottom: 3rem
+  display: flex
+
+.department-header
+  font-size: 2.4rem
+  font-weight: 700
+  margin-bottom: 5rem
+
+.cottage-department
+  max-width: 1170px
+  margin: auto
+  margin-top: 5rem
+  padding-bottom: 7rem
+
+.agent
+  text-align: center
+  display: inline-block
+  width: 33%
+
+.small-grey-info
+  color: #9b9b9b
+  font-size: 0.90rem
+  text-align: center
+
+.head-names-agent
+  span
+    font-size: 0.85em
+    font-weight: normal
+  text-align: center
+
+.portrait__
+  width: 50%
+  vertical-align: center
+
+@media only screen and (min-width: 580px) and (max-width: 1170px)
+  .about-working-area
+    width: 580px
+  h1.about-introduce
+    font-size: 2.8rem
+    font-weight: 700
+    line-height: 3.5rem
+    margin: -0.33em 0
+  .principal-li
+    font-weight: 300
+    width: 50%
+    position: relative
+  .border-red-padding
+    display: flex
+    flex-wrap: wrap
+    font-size: 1.7em
+    font-weight: 400
+    padding: 1.5em 2.5em
+    border: 2px solid #ff4c4e
+    margin: 3.5em 0 1.5em 0
+    text-align: center
+  .about-header
+    font-size: 51px
+    font-weight: 400px
+    text-align: center
+    margin-top: 0em
+  .principles-block
+    width: 100%
+    max-width: 1170px
+    margin: 0 auto
+    padding-top: 2rem
+    padding-bottom: 1rem
+    display: flex
+  .descrip-small-text
+    color: #737373
+    font-size: 1.2em
+    font-weight: 400
+    margin-top: 1rem
+    line-height: 2.2rem
+  .descrip-left-block
+    display: block
+    width: 50%
+    margin-left: 1rem
+    margin-right: 1em
+  .descrip-right-block
+    display: block
+    width: 50%
+    margin-right: 1rem
+  .descrip_small_img
+    width: 23rem
+    height: 19rem
+    max-width: 100%
+  .agent
+    text-align: center
+    margin-top: 1.5em
+    width: 100%
+  .agent-photo
+    padding-left: 3.5em
+    float: left
+    display: inline-block
+    max-width: 50%
+  .agent-text
+    margin-top: 2.5em
+    float: left
+    display: inline-block
+    max-width: 50%
+  .small-grey-info
+    color: #9b9b9b
+    font-size: 0.90rem
+    text-align: center
+  .head-names-agent
+    span
+      font-size: 0.85em
+      font-weight: normal
+    text-align: center
+  .portrait__
+    float: left
+
+.container-slick_gallery
+  display: none
+
+.card__info-item--territory, .card__info-item--area
+  margin: auto 0px
+  background: none
+  position: absolute
+  padding-left: 10px
+
+ul.card__info
+  height: 21px
+  padding-left: 0px
+  margin: 0px
+
+.card__info
+  img
+    margin: auto 0
+    vertical-align: middle
+  td
+    display: table-cell
+    padding-right: 3%
+    width: 35%
+    vertical-align: middle
+    &:last-child
+      padding-right: 0
+      width: 23%
+
+.id_object-mobile
+  display: none
+
+.common-card__url:hover
+  background-color: #eee
+  transition: ease-out 0.5s
+
+.lg-object.lg-image
+  height: inherit !important
+
+.photo-counter
+  position: absolute
+  /*bottom: 15px;
+  left: 20px
+  background-color: rgba(250, 250, 250, 0.7)
+  border-radius: 21px
+  padding: 4px 10px
+  width: 80px
+  text-align: center
+  margin-top: -58px
+  z-index: 3
+
+.photo-counter-mob
+  position: absolute
+  /*bottom: 15px;
+  left: 20px
+  background-color: rgba(250, 250, 250, 0.7)
+  border-radius: 21px
+  padding: 4px 10px
+  width: 80px
+  text-align: center
+  margin-top: -58px
+  z-index: 3
+  bottom: 8px
+  left: 8px
+
+.lg-container
+  /*position: absolute;
+
+.photo-counter-table
+  width: 100%
+
+.photo-counter-logo
+  width: 60%
+
+.photo-counter-text
+  width: 40%
+  text-align: left
+
+@media only screen and (max-width: 767px)
+  .link_container
+    width: 28%
+    height: 300px
+    position: absolute
+    left: 50%
+    margin-left: -14%
+    z-index: 3
+
+@media only screen and (min-width: 768px)
+  .detail-desc
+    /*margin-top: 320px;
+  /*    .left_container {
+   *      width: 120px;
+   *      height: 200px;
+   *      position: absolute;
+   *      left: 20px;
+   *  }
+  .link_container
+    width: 28%
+    height: 200px
+    position: absolute
+    left: 50%
+    margin-left: -14%
+    z-index: 3
+  /*    .right_container {
+   *      width: 120px;
+   *      height: 200px;
+   *      position: absolute;
+   *      left: 260px;
+   *  }
+
+/* correction footer color
+
+.footer__link--padding-top-z:hover
+  color: #ff4c4e !important
+
+/* correction footer menu shift
+@media all and (min-width: 768px)
+  .footer-col--2:nth-child(2)
+    padding-left: 30px
+
+/*fancy correction gallery thumbs
+@media all and (min-width: 800px)
+  .fancybox-thumbs
+    top: auto
+    width: auto
+    bottom: 0
+    left: 0
+    right: 0
+    height: 95px
+    padding: 10px 10px 5px 10px
+    box-sizing: border-box
+    background: rgba(0, 0, 0, 0.3)
+  .fancybox-show-thumbs .fancybox-inner
+    right: 0
+    bottom: 95px
+
+/* the slides
+
+.slick-slide
+  margin: 0 2px
+
+/* the parent
+
+.slick-list
+  margin: 0 -2px
+
+/*correct z-indx for map
+
+.detail-desc__map-wrp
+  z-index: 2
+
+.fancybox-navigation
+  .fancybox-button--arrow_left
+    left: 0
+    padding: 15px 26px 25px 6px
+  .fancybox-button--arrow_right
+    right: 0
+    padding: 15px 6px 25px 26px
+
+/*search list villages
+
+.search_answer_village
+  display: none
+  position: absolute
+  z-index: 5
+  background-color: #fff
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.15)
+  min-width: 300px
+  height: 250px
+  overflow-y: auto
+  a
+    display: block
+    line-height: 2.25rem
+    cursor: pointer
+    font-size: 1rem
+    color: #232323
+    font-weight: 300
+    font-family: sans-serif
+
+/*arrows - for slick
+
+#right_slick_arrow_big
+  position: absolute
+  margin-top: calc(165px - 30px) !important
+  z-index: 3
+  margin: 10px
+  background: rgba(0, 0, 0, 0.3)
+  padding: 8px 4px 4px 4px
+  vertical-align: middle
+  right: 0px
+  cursor: pointer
+
+#left_slick_arrow_big
+  position: absolute
+  margin-top: calc(165px - 30px) !important
+  z-index: 3
+  margin: 10px
+  background: rgba(0, 0, 0, 0.3)
+  padding: 8px 4px 4px 4px
+  vertical-align: middle
+  left: 0px
+  cursor: pointer
+
+/* correct popups in fancyBox container
+
+.button--popup
+  margin-left: calc(50% - 97px)
+
+.popup__title, .popup__text, .popup__directions
+  text-align: center

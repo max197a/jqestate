@@ -1,0 +1,209 @@
+/*======================================
+ *  Selectric v1.13.0
+ *======================================
+
+.selectric-wrapper
+  position: relative
+  cursor: pointer
+
+.selectric-responsive
+  width: 100%
+
+.selectric
+  border: 1px solid #cccccc
+  background: #fff
+  position: relative
+  overflow: hidden
+  border-radius: 3px
+  .label
+    display: block
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    margin: 0 38px 0 13px
+    font-size: 14px
+    line-height: 1
+    // font-family: $medium
+    color: $fontColor
+    padding: 12px 5px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    // max-width: 165px
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 100%
+  .button
+    display: block
+    position: absolute
+    right: 0px
+    top: 0
+    width: 28px
+    height: 100%
+    color: transparent
+    font-size: 0
+    text-align: center
+    transform-origin: center center
+    transition: all $transitionSpeed $ease
+    &:before
+      display: block
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      border: 2px solid $colorRed
+      transform: translateX(-50%) rotate(45deg)
+      border-right: none
+      border-bottom: none
+      left: 50%
+      top: 11px
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      border: 2px solid $colorRed
+      transform: translateX(-50%) rotate(45deg)
+      border-left: none
+      border-top: none
+      left: 50%
+      top: 19px
+
+
+.selectric-focus .selectric
+  border-color: #aaaaaa
+
+.selectric-open
+  z-index: 99
+
+  .selectric-items
+    display: block
+
+.selectric-disabled
+  filter: alpha(opacity = 50)
+  opacity: 0.5
+  cursor: default
+  user-select: none
+
+.selectric-hide-select
+  position: relative
+  overflow: hidden
+  width: 0
+  height: 0
+  select
+    position: absolute
+    left: -100%
+  &.selectric-is-native
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 10
+    select
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 100%
+      width: 100%
+      border: none
+      z-index: 1
+      box-sizing: border-box
+      opacity: 0
+
+.selectric-input
+  position: absolute !important
+  top: 0 !important
+  left: 0 !important
+  overflow: hidden !important
+  clip: rect(0, 0, 0, 0) !important
+  margin: 0 !important
+  padding: 0 !important
+  width: 1px !important
+  height: 1px !important
+  outline: none !important
+  border: none !important
+  *font: 0/0 a !important
+  background: none !important
+
+.selectric-temp-show
+  position: absolute !important
+  visibility: hidden !important
+  display: block !important
+
+/* Items box
+
+.selectric-items
+  display: none
+  position: absolute
+  // top: calc(100% - 1px)
+  left: 0
+  background: #E9E9E9
+  z-index: 2
+  .selectric-scroll
+    height: 100%
+    overflow: auto
+
+.selectric-above .selectric-items
+  top: auto
+  bottom: 100%
+
+.selectric-items
+  border: 1px solid #c4c4c4
+  border-top: none
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    font-size: 12px
+    line-height: 20px
+    min-height: 20px
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+    font-size: 14px
+    line-height: 1
+    min-height: 20px
+    display: block
+    color: $fontColor
+    cursor: pointer
+    // font-family: $medium
+    color: $fontColor
+    padding: 10px 10px 10px 24px
+    background: #fff
+    &.selected,
+    &:hover
+      background: $colorRed
+      color: #fff
+      &.down-arrow
+        &:after
+          filter: none
+      &.top-arrow
+        &:after
+          filter: none
+  .disabled
+    filter: alpha(opacity = 50)
+    opacity: 0.5
+    cursor: default !important
+    background: none !important
+    color: #666 !important
+    user-select: none
+  .selectric-group
+    .selectric-group-label
+      font-weight: bold
+      padding-left: 10px
+      cursor: default
+      user-select: none
+      background: none
+      color: #444
+    &.disabled li
+      filter: alpha(opacity = 100)
+      opacity: 1
+    li
+      padding-left: 25px
+
++r($tablet)
+  .selectric-items
+    // position: static
