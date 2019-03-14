@@ -1,0 +1,79 @@
+// OFFICE BEGIN
+  
+.office
+  &__full-image
+    font-size: 0
+    img
+      width: 100%
+  &__grid
+    padding-top: 80px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &--reverse
+      flex-direction: row-reverse
+      margin-top: -326px
+      .office__item-info
+        padding-top: 56%
+  &__image
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+  &__item
+    max-width: 560px
+    width: 48%
+  &__item-info
+    padding-top: 23px
+    p
+      font-size: 16px
+      line-height: 1.5
+      color: #464646
+      margin-top: 24px
+      &.desktop-hidden
+        display: none
+
++r($desktop)
+  .office
+    &__grid
+      &--reverse
+        margin-top: -150px
+        .office__item-info
+          padding-top: 100px
+
++r($tablet)
+  .office
+    &__full-image
+      font-size: 0
+      img
+        width: 231%
+        margin-left: -70.5%
+    &__grid
+      flex-wrap: wrap
+      flex-direction: column-reverse
+      padding-top: 0
+      &:nth-child(1)
+        img
+          margin-top: 24px
+      &--reverse
+        flex-direction: column
+        margin-top: 23px
+        .office__item-info
+          padding-top: 0px
+    &__item
+      max-width: 100%
+      width: 100%
+      &-info
+        padding-top: 0
+      p
+        letter-spacing: 0.6px
+        &.desktop-hidden
+          display: inline-block
+          font-size: 16px
+          line-height: 1.5
+          color: #464646
+          margin-top: 24px
+        &.mobile-hidden
+          display: none
+
+// OFFICE END

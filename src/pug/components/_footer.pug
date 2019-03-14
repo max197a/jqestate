@@ -4,19 +4,23 @@ footer.footer
   .container
     .footer__block-wrp
       .footer-col.footer-col--1.footer-col--hide-lg
-        .filter-input.filter-input--select.filter-input--js-select
-          select#currency_select_footer
-            option(value='RUR') Рубли (₽)
-            option(selected='', value='USD') Доллары ($)
-            option(value='EUR') Евро (€)
-          .filter-select
-            .filter-select__title Доллары ($)
-            .filter-select__popup
-              .filter-select__col.filter-select--max-width
-                ul.filter-select__col-list
-                  li(data-type='from', data-value='RUR') Рубли (₽)
-                  li(data-type='from', data-value='USD') Доллары ($)
-                  li(data-type='from', data-value='EUR') Евро (€)
+        .filter-input.filter-input--select
+          fieldset
+            .currency_switch
+              .input-radio
+                label(for='curr1')
+                  input#curr1(name='CURRENCY', value='RUB', type='radio', checked='')
+                  span ₽
+              .input-radio
+                label(for='curr2')
+                  input#curr2(name='CURRENCY', value='USD', type='radio')
+                  span $
+              .input-radio
+                label(for='curr3')
+                  input#curr3(name='CURRENCY', value='EUR', type='radio')
+                  span €
+              .currency_switch_indicator
+
       .footer-col.footer-col--1
         .footer__header JQ Estate
         a.footer__link.footer__link--padding-bottom.footer__link-interval(href='/zagorodnaya/spetspredlozheniya/') Спецпредложения
@@ -114,11 +118,11 @@ footer.footer
           a.button.button--green.footer__callback(href='#popup-callback') Обратный звонок
           .footer__social-wrp
             a.footer__social-block.footer__social-block--inst(href='//www.instagram.com/jq_estate/')
-              svg(height='36px', width='36px')
-                use(xlink:href='#instagram')
+              .footer__social-image
+                img(src="img/instagram.svg", alt="")
             a.footer__social-block.footer__social-block--fb(href='//www.facebook.com/jqestate/')
-              svg(height='36px', width='36px')
-                use(xlink:href='#facebook')
+              .footer__social-image
+                img(src="img/fb.svg", alt="")
 
       
 // FOOTER :: END

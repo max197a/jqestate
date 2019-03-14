@@ -1,13 +1,290 @@
+// FOOTER BEGIN
+  
 .footer
-  &__wrapper
+  position: relative
+  border-top: .0625rem solid #252525
+  background-color: #303030
+  .container
+    padding: 0
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
     width: 100%
-    border-top: 1px solid #cccccc
-    padding-top: 32px
-    padding: 28px 0 71px
-    p
-      font-size: 15px
+    background: url(../img/curve-lines-black.svg) 0
 
-+r($tablet)
-  .footer
-    &__wrapper
-      padding: 25px 0
+.footer__block-wrp
+  position: relative
+  padding: 2.8125rem 1.875rem 2.1875rem
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  z-index: 1
+
+.footer__block-col-wrp, .footer__block-wrp
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+.footer__block-col-wrp .footer__link:first-child
+  color: white
+  font-weight: bold
+
+.footer__link-interval
+  line-height: 30px !important
+
+@media (max-width: 1279px)
+  .footer__block-col-wrp .footer-col--2
+    -ms-flex-preferred-size: 50%
+    flex-basis: 50%
+    max-width: 50%
+
+@media (max-width: 768px)
+  .footer__block-col-wrp .footer-col--2
+    -ms-flex-preferred-size: 100%
+    flex-basis: 100%
+    max-width: 100%
+
+@media (min-width: 768px)
+  .footer-col--2:nth-child(2)
+    padding-left: 30px
+
+.footer__header
+  font-size: 1.125rem
+  font-weight: 500
+  line-height: 1.4375rem
+  color: #8f9699
+  padding-bottom: 1rem
+  border-bottom: 0.0625rem solid hsla(0, 0%, 100%, 0.1)
+
+.footer__item
+  overflow: hidden
+
+.footer__link
+  font-size: .875rem
+  line-height: 1.37rem
+  color: rgba(255, 255, 255, 0.8)
+  text-decoration: none
+  display: block
+  cursor: pointer
+  &:hover
+    color: #ff4c4e
+
+.footer__link--padding-top
+  padding-top: 0.75rem
+
+.footer__link--open-text
+  position: absolute
+  bottom: -2rem
+  left: 0
+  text-decoration: underline
+  &:hover
+    color: #fff
+    text-decoration: none
+
+.footer__block-down
+  margin-top: 1.25rem
+  padding-top: 2.8125rem
+  border-top: 0.0625rem solid hsla(0, 0%, 100%, 0.1)
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -ms-flex-preferred-size: 100%
+  flex-basis: 100%
+  max-width: 100%
+
+@media (max-width: 1279px)
+  .footer__block-down .footer-col
+    &:first-child
+      -ms-flex-preferred-size: 40%
+      flex-basis: 40%
+      max-width: 40%
+      padding-right: 1.25rem
+    &:last-child
+      -ms-flex-preferred-size: 60%
+      flex-basis: 60%
+      max-width: 60%
+      padding-right: 0
+
+@media (max-width: 768px)
+  .footer__block-down .footer-col
+    &:first-child
+      padding-right: 0
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+    &:last-child
+      -ms-flex-preferred-size: 100%
+      flex-basis: 100%
+      max-width: 100%
+
+.footer__phone
+  font-size: 1.125rem
+  line-height: 1.3125rem
+  color: #f1f2f3
+  text-decoration: none
+  margin-right: 1.875rem
+  -webkit-transition: color .3s ease-in-out
+  -o-transition: color .3s ease-in-out
+  transition: color 0.3s ease-in-out
+  &:hover
+    color: #ff4c4e
+
+@media (max-width: 1279px)
+  .footer__phone
+    font-size: 1rem
+    line-height: 1.3125rem
+    margin-right: 0.625rem
+
+@media (max-width: 1279px)
+  .footer__callback
+    padding: 1rem 1.25rem
+
+@media (max-width: 768px)
+  .footer__callback
+    margin: 1.25rem 0
+
+.footer__contacts-block
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+@media (max-width: 768px)
+  .footer__contacts-block
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: start
+    -ms-flex-align: start
+    align-items: flex-start
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    padding-top: 1.25rem
+
+.footer__social-wrp
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+.footer__social-block
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  height: 2.25rem
+  width: 2.25rem
+  border-radius: 1.125rem
+  background-color: transparent
+  border: .0625rem solid #6e6e6e
+  -webkit-transition: background-color .2s ease-in-out
+  -o-transition: background-color .2s ease-in-out
+  transition: background-color 0.2s ease-in-out
+  svg
+    fill: #f1f2f3
+  &:first-child
+    margin: 0 0.625rem 0 0.9375rem
+  &:last-child
+    margin: 0 0.9375rem 0 0.625rem
+  &:hover
+    background-color: #6e6e6e
+    svg
+      fill: #f1f2f3
+.footer__social-image
+  font-size: 0
+
+@media (max-width: 1279px)
+  .footer__social-block:first-child
+    margin: 0 5px 0 0.625rem
+
+@media (max-width: 1279px)
+  .footer__social-block:last-child
+    margin: 0 0.625rem 0 0.3125rem
+
+.footer-col
+  position: relative
+  padding-right: 3.75rem
+  margin-bottom: 2.8125rem
+
+.footer-col--1
+  -ms-flex-preferred-size: 25%
+  flex-basis: 25%
+  max-width: 25%
+
+.footer-col--2
+  -ms-flex-preferred-size: 50%
+  flex-basis: 50%
+  max-width: 50%
+
+.footer-col--padding-left
+  padding-left: 1.875rem
+
+.footer-col--no-indent
+  margin-bottom: 0
+
+.footer-col--hide-lg .filter-input:last-child
+  margin-top: 1rem
+
+@media (max-width: 1279px)
+  .footer-col--hide-lg
+    display: none
+  .footer-col--1
+    -ms-flex-preferred-size: 33.333333%
+    flex-basis: 33.333333%
+    max-width: 33.33333%
+  .footer-col--2
+    -ms-flex-preferred-size: 66.666666%
+    flex-basis: 66.666666%
+    max-width: 66.66667%
+
+@media (max-width: 768px)
+  .footer-col--padding-left
+    padding-left: 0
+  .footer-col--1, .footer-col--2
+    -ms-flex-preferred-size: 100%
+    flex-basis: 100%
+    max-width: 100%
+  .footer-col--hide-lg
+    display: block
+
+.footer-description
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-box-align: start
+  -ms-flex-align: start
+  align-items: flex-start
+  margin-bottom: 0
+
+.footer-description__text
+  font-size: .8525rem
+  line-height: 1.375rem
+  color: #f1f2f3
+
+.footer-description__text--gray
+  margin-top: .4375rem
+  color: #929292
+  span
+    display: inline-block
+    padding-left: 1.875rem
+
+// FOOTER END

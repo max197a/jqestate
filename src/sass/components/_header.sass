@@ -1,958 +1,493 @@
-// /* HEADER
-// .header
-//   position: fixed
-//   top: 0
-//   right: 0
-//   left: 0
-//   background: #fff
-//   height: auto
-//   z-index: 100
-//   border-bottom: 1px solid #ececec
-//   &__wrapper
-//     display: flex
-//     align-items: center
-//     justify-content: space-between
-//   .hamburger
-//     display: none
-//   &__logotype
-//     font-size: 0
-//     position: relative
-//     z-index: 2
-//     margin-bottom: -1px
-//     img
-//       width: 217px
-//       height: auto
-//       &.mobile
-//         display: none
-//   &__menu
-//     // margin-right: -20px
-//   &__menu-link
-//     font-size: 18px
-//     color: #000000
-//     font-weight: 400
-//     display: inline-block
-//     margin: 0 15px
-//     position: relative
-//     transition: all $transitionSpeed $ease
-//     &:hover
-//       color: #ff4c4e
-//   &__log-out
-//     display: flex
-//     align-items: center
-//     justify-content: flex-end
-//     padding-right: 1px
-//     p
-//       font-size: 15px
-//       color: #959595
-//       line-height: 1.2
-//       // font-weight: 00
-//   &__log-image
-//     font-size: 0
-//     margin-left: 19px
-//     display: flex
-//     align-items: center
-//     justify-content: center
-//     border-radius: 50%
-//     width: 50px
-//     height: 50px
-//     overflow: hidden
-//     background: $green
-//     transition: all $transitionSpeed $ease
-//     &:hover
-//       background: $greenHover
-//     &-container
-//       font-size: 0
-//     img
-//       width: auto
-//       height: 25px
-//       margin-left: -3px
-//   &__name
-//     text-align: right
-
-// +r($desktop)
-//   .header
-//     &__logotype
-//       img
-//         width: 160px
-//     &__menu-link
-//       font-size: 17px
-//       margin: 0 12px
-//     &__log-image
-//       width: 40px
-//       height: 40px
-//       margin-left: 15px
-//       img
-//         height: 18px
-
-// +r($tablet)
-//   .header
-//     &__wrapper
-//       padding: 15px 0
-//       justify-content: center
-//       position: relative
-//       z-index: 4
-//       &.is-active
-//         .header__menu
-//           transform: translateX(0)
-//           opacity: 1
-//         .header__log-out
-//           transform: translateX(0)
-//           opacity: 1
-//           transition: all 0.5s $ease
-//         .header__menu-link
-//           opacity: 1
-//           transform: translateX(0)
-//     &__logotype
-//       position: relative
-//       z-index: 4
-//       img
-//         height: 20px
-//         width: auto
-//         &.desktop
-//           display: none
-//         &.mobile
-//           display: block
-//     &__menu
-//       height: calc(100vh - 50px)
-//       position: absolute
-//       background: #fff
-//       width: calc(100% + 40px)
-//       z-index: 1
-//       top: 50px
-//       left: -20px
-//       padding: 40px
-
-//       transition: all $transitionSpeed $ease
-//       transform: translateX(101%)
-//       // opacity: 0
-//     &__menu-link
-//       width: 100%
-//       display: block
-//       margin: 0 0 24px 0
-//       font-size: 18px
-//       opacity: 0
-//       transform: translateX(101%)
-//       transition: all 0.5s $ease
-//     &__log-out
-//       position: absolute
-//       top: 240px
-//       z-index: 4
-//       left: -20px
-//       text-align: left
-//       width: 100%
-//       padding-left: 40px
-//       justify-content: flex-start
-//       transition: all $transitionSpeed $ease
-//       transform: translateX(101%)
-//       opacity: 0
-//       &:before
-//         position: absolute
-//         display: block
-//         content: ''
-//         width: 80px
-//         height: 1px
-//         background: #ececec
-//         top: -20px
-//         left: 40px
-//     &__name
-//       text-align: left
-//     &__log-image
-//       margin-left: auto
-//       margin-right: -20px
-//     .hamburger
-//       display: block
-//       order: 4
-//       padding: 0
-//       margin-right: 0px
-//       width: 18px
-//       height: 16px
-//       opacity: 1
-//       position: absolute
-//       z-index: 4
-//       right: 0px
-//       // outline: 1px solid red
-//       overflow: hidden
-//       .hamburger-inner
-//         border-radius: 0
-//         background: #000
-//         width: 18px
-//         height: 2px
-//         top: 4px
-//         &:before,
-//         &:after
-//           border-radius: 0
-//           background: #000
-//           width: 100%
-//           height: 2px
-//           width: 18px
-//         &:before
-//           top: 6px
-//         &:after
-//           top: 12px
-//       &.is-active
-//         .hamburger-inner
-//           top: -1px
-//           &:after
-//             top: 20px
-//             left: 0px
-
-@media only screen and (max-width: 768px)
-  div
-    &.logo-m
-      position: absolute
-      left: calc(50% - 79.5px)
-    &.hamburger-m
-      right: 0px
-      position: absolute
-  .header__item--hidden-to-md
-    display: none
-  .header__logo-new
-    margin-left: 0px !important
-  .text_button
-    position: absolute
-    /*margin: auto;
-    width: inherit
-    /*vertical-align: middle;
-    height: 14px
-    top: 50%
-    margin-top: -7px
-  .detail-pagination__arrow--next, .detail-pagination__arrow--prev
-    height: 35px
-    width: 130px
-  button, input
-    overflow: unset
-  button, input, optgroup, select, textarea
-    font-size: 0.95em
-  .footer__header
-    padding-bottom: 20px
-    margin-bottom: 20px
-  .footer__link--padding-top:nth-child(1)
-    padding-top: 0px
-  .margin--footer-top
-    margin-top: 35px
-  .footer__link--padding-bottom
-    padding-bottom: 6px
-  .padding--bottom-menu-b
-    padding-bottom: 5px
-  .margin-bottom--rm
-    margin-bottom: 0px
-  .footer__link--padding-top-z
-    padding-top: 15px
-  .switch
-    switch-detail1
-      width: 100px
-    &::before
-      width: 90px
-      height: 28px
-      border-radius: 14px
-      left: unset
-      top: 0px
-      right: -3px
-  .switch__label_one, .switch__label_two, .switch__label_three
-    /*padding: 0 7px;
-     *height: 25px;
-     *top: 2px;
-    padding: 2px 0 0 0
-    height: 25px
-    line-height: 25px
-    /*top: 3px !important;
-    /*margin-left: 11px;
-    position: absolute
-  .switch__indicator
-    left: unset
-    right: 14px
-    width: 28px
-    height: 28px
-  .switch input
-    &#one:checked ~ .switch__indicator
-      transform: translate3d(-46px, 0, 0)
-    &#two:checked ~ .switch__indicator
-      transform: translate3d(-13px, 0, 0)
-    &#three:checked ~ .switch__indicator
-      transform: translate3d(17px, 0, 0)
-  .switch__label_one
-    right: 68px
-  .switch__label_two
-    right: 37px
-  .switch__label_three
-    right: 6px
-  .request__item-wrp
-    width: 95%
-  .request__header
-    font-size: 1.2em
-  .detail-inform__text
-    line-height: 2.2em
-    font-size: 1.0em
-    padding-right: 15px
-  .detail-inform__text--bold
-    font-size: 1.1em !important
-    padding-bottom: 10px
-    padding-top: 10px
-  .request__input, .button--big
-    width: 100%
-  .id_object-mobile
-    position: absolute
-    z-index: 3
-    background-color: #fefefe99
-    width: 80px
-    height: 35px
-    border-radius: 17.5px
-    margin-top: 8px
-    margin-left: 8px
-    line-height: 35px
-    text-align: center
-    font-size: 0.9em
-  .page
-    padding-top: 3.125rem
-  .detail-slider-mobile
-    height: 300px
-  .container-slick_gallery
-    position: absolute
-    width: 100%
-  .item-slick-slider
-    height: 300px
-    width: 100%
-    /*background-color: #eee;
-    background-position: center
-    background-size: cover
-    background-repeat: no-repeat
-  .sliсk_next
-    position: absolute
-    top: calc(50% - 26px)
-    right: 0px
-    height: 3.25rem
-    width: 3.25rem
-    z-index: 3
-    cursor: pointer
-    &:after
-      position: absolute
-      top: 15px
-      left: 0
-      height: 40%
-      width: 40%
-      border: .125rem solid #fff
-      border-bottom: none
-      transform: rotate(45deg)
-      border-left: none
-      transform: rotate(45deg)
-      border-left: none
-  .sliсk_prev
-    position: absolute
-    top: calc(50% - 26px)
-    height: 3.25rem
-    width: 3.25rem
-    z-index: 3
-    cursor: pointer
-    &:after
-      position: absolute
-      top: 15px
-      right: 0
-      height: 40%
-      width: 40%
-      border: .125rem solid #fff
-      border-bottom: none
-      transform: rotate(-135deg)
-      border-left: none
-  .detail-desc
-    /*padding-top: 310px;
-  .photo-counter, #lightgallery_
-    display: none
-  .settlements-header .container
-    background-color: rgba(0, 0, 0, 0.5)
-  /*About PAGE
-  .area_logic
-    /*border-bottom: 1px solid #eee;
-    padding-bottom: 35px
-    background-color: #fff
-  .first_head
-    padding-top: 45px
-    color: #252525
-    font-family: Helvetica Neue, Arial, "sans-serif"
-    font-weight: 700
-    font-size: 1.3em
-  .last-head
-    padding-top: 45px
-    color: #252525
-    font-family: Helvetica Neue, Arial, "sans-serif"
-    font-weight: 700
-    font-size: 1.3em
-    padding-top: unset
-    font-size: 1.4em
-    padding-bottom: 25px
-  .sub--head
-    font-size: 1.0em
-    font-weight: normal
-    font-family: Helvetica Neue, Arial, "sans-serif"
-  .center__
-    text-align: center
-    width: 100%
-  .small_about
-    color: #656565
-    font-size: 1.1em
-  li
-    list-style-type: none
-  .numer-principal-n1, .numer-principal-n2, .numer-principal-n3, .numer-principal-n4
-    /* width: 70px;
-    /* height: 70px;
-    border: 2px solid #ff4c4e
-    /* margin-right: 20px;
-    border-radius: 50%
-    /* margin-bottom: 20px;
-    line-height: 3.3
-    padding: 2rem 1.8rem
-    margin-right: 20px
-    font-size: 1.5em
-    font-weight: normal
-  .numer-principal-n1:after, .numer-principal-n2:after, .numer-principal-n3:after, .numer-principal-n4:after
-    content: ""
-    position: absolute
-    width: 2.65rem
-    height: 2.65rem
-    background: #fff
-    border-radius: 50%
-  .numer-principal-n2:after
-    margin-top: 42px
-  .numer-principal-n3:after
-    margin-top: 42px
-    margin-left: -53px
-  .numer-principal-n4:after
-    margin-left: -53px
-    margin-top: -5px
-  .text-list-princ
-    font-size: 1.05em
-  .border-red-padding
-    padding: 30px 20px
-    border: 2px solid #ff4c4e
-    margin: 45px 15px
-    text-align: center
-  .open_text__button
-    width: 100%
-    padding: 15px 0px
-    text-align: center
-  .usual_header
-    font-size: 2.0em
-    color: #252525
-    margin-top: 25px
-    margin-bottom: 50px
-  .sub-header-left span
-    text-align: left
-    font-weight: normal
-    margin: 28px 0px
-    line-height: 1.3
-  .inner-padding
-    /*padding: 15px;
-  .descrip_small
-    padding: 20px 0
-    font-size: 0.9em
-    line-height: 2.3
-  .overflow_hidden_text
-    overflow-y: hidden
-    height: 120px
-  .eve-_block
-    background-color: #ffffff
-    padding: 50px 15px 0px 15px
-  .odd-block
-    background-color: #fafafa
-    padding: 50px 15px 0px 15px
-  .delimeter-hr
-    margin: 30px 15px
-  .small-grey-info
-    color: #9b9b9b
-    font-size: 0.90em
-    text-align: center
-  .head-names-agent
-    span
-      font-size: 0.85em
-      font-weight: normal
-    text-align: center
-  .portrait__
-    width: 180px
-    /*text-align: center;
-    margin: 0 auto
-    position: relative
-    margin-left: -90px
-    left: 50%
-  .principal-ul
-    display: flex
-    flex-direction: column
-    flex-wrap: wrap
-    padding-top: 20px
-  .principal-li
-    display: inline-block
-    font-weight: 300
-    width: 100%
-    position: relative
-  .border-red-padding
-    display: flex
-    flex-wrap: wrap
-    font-size: 1.7em
-    font-weight: 400
-    padding: 2.5em 2.5em
-    border: 2px solid #ff4c4e
-    margin: 5.5em 0
-    text-align: center
-
-@media only screen and (min-width: 768px)
-  .photo-counter-mob
-    display: none
-
-ul, li
-  list-style: none
-
-.about-color
-  background-color: #fff
-
-h1.about-introduce
-  font-size: 2.8rem
-  font-weight: 700
-
-p.about-introduce
-  font-size: 1.6em
-  font-weight: 400
-
-.about-working-area
-  padding-top: 7.5rem
-  /*width: 100%;
-  text-align: center
-  width: 1170px
-  margin: auto
-
-.text-list-princ
-  display: block
-  font-size: 21px
-  font-weight: 400
-  list-style-image: none
-  list-style-position: outside
-  list-style-type: none
-
-.principal-li
-  font-weight: 300
-  width: 25%
-  position: relative
-
-.principal-ul
-  display: flex
-  flex-wrap: wrap
-  padding-top: 20px
-
-.numer-principal-n1, .numer-principal-n2, .numer-principal-n3, .numer-principal-n4
-  width: 2.65em
-  height: 2.65em
-  padding: 20px 33px
-  border: 2px solid #ff4c4e
-  border-radius: 50%
-  margin-bottom: 20px
-  line-height: 3.3
-  /*margin-right: 20px;
-  font-size: 3em
-  font-weight: normal
-
-.numer-principal-n1:after, .numer-principal-n2:after, .numer-principal-n3:after, .numer-principal-n4:after
-  content: ""
-  position: absolute
-  width: 0.85em
-  height: 0.85em
-  background: #fff
-  border-radius: 50%
-
-.numer-principal-n1:after
-  margin-left: -11px
-  margin-top: 17px
-
-.numer-principal-n2:after
-  margin-top: 91px
-
-.numer-principal-n3:after
-  margin-top: 91px
-  margin-left: -67px
-
-.numer-principal-n4:after
-  margin-left: -48px
-  margin-top: 17px
-
-.border-red-padding
-  width: 100%
-  font-size: 1.7em
-  font-weight: 400
-  padding: 2.5em 2.5em
-  border: 2px solid #ff4c4e
-  margin: 4em 0
-  text-align: center
-
-.about_block_left
-  display: block
-  width: 50%
-  padding-right: 3rem
-
-.about_block_right
-
-.description-block
-  /*width: 1170px;
-  box-sizing: border-box
-  margin: auto
-
-.about-header
-  font-size: 51px
-  font-weight: 400px
-  text-align: center
-  margin-top: 1.5em
-
-.sub-header
-  font-size: 1.8em
-  font-weight: 400
-  margin-bottom: 1rem
-  margin-top: 0px
-
-.descrip-small-text
-  color: #737373
-  font-size: 1.2em
-  font-weight: 400
-  margin-top: 1rem
-  line-height: 2.2rem
-
-.descrip-left-block
-  display: block
-  width: auto
-  margin-left: 3rem
-  margin-right: 17rem
-
-.descrip-right-block
-  display: block
-  width: auto
-  margin-right: 3rem
-
-.descrip_small_img
-  width: 23rem
-  height: 19rem
-
-.even-block
-  padding-top: 2rem
-  background-color: #f9f9f9
-
-.odd-block
-  background-color: #fff
-
-.principles-block
-  width: 1170px
-  margin: auto
-  padding-top: 4rem
-  padding-bottom: 3rem
-  display: flex
-
-.department-header
-  font-size: 2.4rem
-  font-weight: 700
-  margin-bottom: 5rem
-
-.cottage-department
-  max-width: 1170px
-  margin: auto
-  margin-top: 5rem
-  padding-bottom: 7rem
-
-.agent
-  text-align: center
-  display: inline-block
-  width: 33%
-
-.small-grey-info
-  color: #9b9b9b
-  font-size: 0.90rem
-  text-align: center
-
-.head-names-agent
-  span
-    font-size: 0.85em
-    font-weight: normal
-  text-align: center
-
-.portrait__
-  width: 50%
-  vertical-align: center
-
-@media only screen and (min-width: 580px) and (max-width: 1170px)
-  .about-working-area
-    width: 580px
-  h1.about-introduce
-    font-size: 2.8rem
-    font-weight: 700
-    line-height: 3.5rem
-    margin: -0.33em 0
-  .principal-li
-    font-weight: 300
-    width: 50%
-    position: relative
-  .border-red-padding
-    display: flex
-    flex-wrap: wrap
-    font-size: 1.7em
-    font-weight: 400
-    padding: 1.5em 2.5em
-    border: 2px solid #ff4c4e
-    margin: 3.5em 0 1.5em 0
-    text-align: center
-  .about-header
-    font-size: 51px
-    font-weight: 400px
-    text-align: center
-    margin-top: 0em
-  .principles-block
-    width: 100%
-    max-width: 1170px
-    margin: 0 auto
-    padding-top: 2rem
-    padding-bottom: 1rem
-    display: flex
-  .descrip-small-text
-    color: #737373
-    font-size: 1.2em
-    font-weight: 400
-    margin-top: 1rem
-    line-height: 2.2rem
-  .descrip-left-block
-    display: block
-    width: 50%
-    margin-left: 1rem
-    margin-right: 1em
-  .descrip-right-block
-    display: block
-    width: 50%
-    margin-right: 1rem
-  .descrip_small_img
-    width: 23rem
-    height: 19rem
-    max-width: 100%
-  .agent
-    text-align: center
-    margin-top: 1.5em
-    width: 100%
-  .agent-photo
-    padding-left: 3.5em
-    float: left
-    display: inline-block
-    max-width: 50%
-  .agent-text
-    margin-top: 2.5em
-    float: left
-    display: inline-block
-    max-width: 50%
-  .small-grey-info
-    color: #9b9b9b
-    font-size: 0.90rem
-    text-align: center
-  .head-names-agent
-    span
-      font-size: 0.85em
-      font-weight: normal
-    text-align: center
-  .portrait__
-    float: left
-
-.container-slick_gallery
+div.header__button-menu
   display: none
 
-.card__info-item--territory, .card__info-item--area
-  margin: auto 0px
-  background: none
-  position: absolute
-  padding-left: 10px
+@media (max-width: 1279px)
+  div.header__button-menu
+    display: flex
 
-ul.card__info
-  height: 21px
-  padding-left: 0px
-  margin: 0px
+input
+  outline: none !important
 
-.card__info
+.header__logo-new
+  width: 40px
+  // /*height: 40px; //doesn't work in IE
+  display: block
+  margin-right: 15px
   img
-    margin: auto 0
-    vertical-align: middle
-  td
-    display: table-cell
-    padding-right: 3%
-    width: 35%
-    vertical-align: middle
-    &:last-child
-      padding-right: 0
-      width: 23%
+    width: 40px
+    height: auto
+    &.mobile
+      display: none
 
-.id_object-mobile
-  display: none
+@media (max-width: 1279px)
+  .header__logo-new
+    width: 255px
+    img.desktop
+      display: none
+    img.mobile
+      display: block
+      width: 255px
 
-.common-card__url:hover
-  background-color: #eee
-  transition: ease-out 0.5s
 
-.lg-object.lg-image
-  height: inherit !important
-
-.photo-counter
-  position: absolute
-  /*bottom: 15px;
-  left: 20px
-  background-color: rgba(250, 250, 250, 0.7)
-  border-radius: 21px
-  padding: 4px 10px
-  width: 80px
-  text-align: center
-  margin-top: -58px
-  z-index: 3
-
-.photo-counter-mob
-  position: absolute
-  /*bottom: 15px;
-  left: 20px
-  background-color: rgba(250, 250, 250, 0.7)
-  border-radius: 21px
-  padding: 4px 10px
-  width: 80px
-  text-align: center
-  margin-top: -58px
-  z-index: 3
-  bottom: 8px
-  left: 8px
-
-.lg-container
-  /*position: absolute;
-
-.photo-counter-table
-  width: 100%
-
-.photo-counter-logo
-  width: 60%
-
-.photo-counter-text
-  width: 40%
-  text-align: left
-
-@media only screen and (max-width: 767px)
-  .link_container
-    width: 28%
-    height: 300px
+@media (max-width: 768px)
+  .logo-m
     position: absolute
-    left: 50%
-    margin-left: -14%
-    z-index: 3
-
-@media only screen and (min-width: 768px)
-  .detail-desc
-    /*margin-top: 320px;
-  /*    .left_container {
-   *      width: 120px;
-   *      height: 200px;
-   *      position: absolute;
-   *      left: 20px;
-   *  }
-  .link_container
-    width: 28%
-    height: 200px
+    left: calc(50% - 79.5px)
+  .hamburger-m
+    right: 0px
     position: absolute
-    left: 50%
-    margin-left: -14%
-    z-index: 3
-  /*    .right_container {
-   *      width: 120px;
-   *      height: 200px;
-   *      position: absolute;
-   *      left: 260px;
-   *  }
+  .header__logo-new
+    width: 160px
+    margin: 0
+    img.mobile
+      display: block
+      width: 160px
 
-/* correction footer color
+hr
+  border: none
+  border-bottom: .0625rem solid #e0e0e0
+  margin: 1.25rem 0
 
-.footer__link--padding-top-z:hover
-  color: #ff4c4e !important
-
-/* correction footer menu shift
-@media all and (min-width: 768px)
-  .footer-col--2:nth-child(2)
-    padding-left: 30px
-
-/*fancy correction gallery thumbs
-@media all and (min-width: 800px)
-  .fancybox-thumbs
-    top: auto
-    width: auto
-    bottom: 0
-    left: 0
-    right: 0
-    height: 95px
-    padding: 10px 10px 5px 10px
-    box-sizing: border-box
-    background: rgba(0, 0, 0, 0.3)
-  .fancybox-show-thumbs .fancybox-inner
-    right: 0
-    bottom: 95px
-
-/* the slides
-
-.slick-slide
-  margin: 0 2px
-
-/* the parent
-
-.slick-list
-  margin: 0 -2px
-
-/*correct z-indx for map
-
-.detail-desc__map-wrp
-  z-index: 2
-
-.fancybox-navigation
-  .fancybox-button--arrow_left
-    left: 0
-    padding: 15px 26px 25px 6px
-  .fancybox-button--arrow_right
-    right: 0
-    padding: 15px 6px 25px 26px
-
-/*search list villages
-
-.search_answer_village
-  display: none
-  position: absolute
-  z-index: 5
-  background-color: #fff
-  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.15)
-  min-width: 300px
-  height: 250px
-  overflow-y: auto
-  a
-    display: block
-    line-height: 2.25rem
+.button
+  display: inline-block
+  padding: 1rem 2.875rem
+  margin-top: 5px
+  width: auto
+  color: #fff
+  border-radius: 6.25rem
+  text-decoration: none
+  -webkit-transition: background-color .2s
+  -o-transition: background-color .2s
+  transition: background-color 0.2s
+  &:hover
     cursor: pointer
-    font-size: 1rem
-    color: #232323
-    font-weight: 300
-    font-family: sans-serif
 
-/*arrows - for slick
+@media (max-width: 1279px)
+  .button
+    padding: 1rem 2rem
 
-#right_slick_arrow_big
-  position: absolute
-  margin-top: calc(165px - 30px) !important
-  z-index: 3
-  margin: 10px
-  background: rgba(0, 0, 0, 0.3)
-  padding: 8px 4px 4px 4px
-  vertical-align: middle
-  right: 0px
-  cursor: pointer
+.button--red
+  background-color: #ff4c4e
+  &:hover
+    background-color: #f24345
 
-#left_slick_arrow_big
-  position: absolute
-  margin-top: calc(165px - 30px) !important
-  z-index: 3
-  margin: 10px
-  background: rgba(0, 0, 0, 0.3)
-  padding: 8px 4px 4px 4px
-  vertical-align: middle
-  left: 0px
-  cursor: pointer
+.button--green
+  background-color: #00c853
+  &:hover
+    background-color: #00b44b
 
-/* correct popups in fancyBox container
+.button--green-small
+  padding: .8125rem 1.5625rem
+  background-color: #00c853
+  &:hover
+    background-color: #00b44b
+
+.button--white
+  color: #000
+  background-color: #fff
+  padding: 0.6875rem 1.875rem
+  &:hover
+    background-color: #ccc
+
+.button--gray
+  background-color: #f1f1f1
+  color: #232323
+  padding: 0.8125rem 1.5625rem
+  &:hover
+    background-color: #d8d8d8
+
+.button--gray-small
+  background-color: #f1f1f1
+  color: #232323
+  padding: .5625rem 1.25rem
+  text-align: center
+  font-size: 1rem
+  line-height: 0.875rem
+  &:hover
+    background-color: #d8d8d8
+
+.button--orange
+  background-color: #f5a623
+  padding: 0.8125rem 1.5625rem
+  &:hover
+    background-color: #db8c0a
+
+@media (max-width: 768px)
+  .button--filter
+    padding: 1rem 4.0625rem 1rem 5.8125rem
+    &:before
+      left: 4.0625rem
+
+.button--middle
+  padding: 0.6875rem 1.875rem
+
+.button--big
+  padding: 1.125rem 2.875rem
+
+@media (max-width: 1279px)
+  .button--big
+    padding: 0.938rem 2rem
+
+@media (max-width: 768px)
+  .button--big
+    padding: 0.938rem 2.688rem
+
+.button--wide
+  height: 2.375rem
+  width: 100%
+  text-align: center
+  padding: 0.3125rem 3.25rem
 
 .button--popup
-  margin-left: calc(50% - 97px)
+  padding: 1.0625rem 3.75rem
 
-.popup__title, .popup__text, .popup__directions
+.button-center
   text-align: center
+
+.button-center--margin-bottom
+  margin-bottom: 2.5rem
+
+.header
+  position: absolute
+  top: 0
+  left: 0
+  height: 5.625rem
+  width: 100%
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  background-color: #fff
+  border-bottom: .0625rem solid #ececec
+  z-index: 1100
+  &.is-fixed
+    position: fixed
+
+@media (max-width: 1279px)
+  .header
+    height: 5rem
+
+@media (max-width: 768px)
+  .header
+    height: 3.125rem
+    -webkit-box-shadow: 0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.2)
+
+.header__block-wrp
+  padding: 0 1.875rem
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+@media (max-width: 1279px)
+  .header__block-wrp--close-menu
+    .header__logo
+      // /*width:2.4375rem
+    .header__callback
+      display: none
+
+@media (max-width: 768px)
+  .header__block-wrp
+    padding: 0
+  .header__block-wrp--close-menu
+    .header__logo
+      // /*width:1.75rem
+    .header__callback, .header__item--hidden-to-md
+      display: none
+
+.header__logo
+  display: block
+  height: 2.1875rem
+  width: 2.4375rem
+  background: url(/local/templates/jqestate/img/logo.png) no-repeat 0
+  margin-right: .9375rem
+  margin-left: 0.625rem
+
+@media (max-width: 1279px)
+  .header__logo
+    width: 14.1875rem
+    background: url(/local/templates/jqestate/img/logo-mobile.png) no-repeat 0
+    margin-right: 0
+
+@media (max-width: 768px)
+  .header__logo
+    width: 8.0625rem
+    height: 1.25rem
+    background: url(/local/templates/jqestate/img/logo-mini.png) no-repeat 0
+
+.header__item
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+.header__item--hidden-to-md
+  display: none
+
+@media (max-width: 768px)
+  .header__item--hidden-to-md
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+
+.header__fav
+  position: relative
+  height: 1.125rem
+  width: 1.25rem
+  background: url(/local/templates/jqestate/img/fav-icon.png) no-repeat 0
+  margin-left: 0.9375rem
+  &:after
+    content: attr(data-count)
+    position: absolute
+    top: -.25rem
+    right: -.5625rem
+    height: .875rem
+    width: .875rem
+    font-size: .5rem
+    line-height: .9375rem
+    text-align: center
+    background-color: #ff4c4e
+    color: #fff
+    border-radius: 50%
+
+.header__phone
+  font-size: 1.125rem
+  font-weight: bold
+  line-height: 1.3125rem
+  color: #232323
+  text-decoration: none
+  -webkit-transition: color .2s
+  -o-transition: color .2s
+  transition: color .2s
+  margin-right: 0.9375rem
+  &:hover
+    color: #ff4c4e
+
+@media (max-width: 768px)
+  .header__phone
+    display: none
+
+@media (max-width: 1279px)
+  .header__callback
+    display: none
+
+.header__button-line-wrp
+  width: 1.125rem
+  height: .6875rem
+  position: relative
+  -webkit-transition: .5s ease-in-out
+  -o-transition: .5s ease-in-out
+  transition: .5s ease-in-out
+  cursor: pointer
+  -webkit-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  transform: rotate(0deg)
+  span
+    -webkit-transform: rotate(0deg)
+    -ms-transform: rotate(0deg)
+    transform: rotate(0deg)
+    display: block
+    position: absolute
+    height: .125rem
+    width: 100%
+    background-color: #232323
+    opacity: 1
+    left: 0
+    -webkit-transition: .25s ease-in-out
+    -o-transition: .25s ease-in-out
+    transition: 0.25s ease-in-out
+    &:first-child
+      top: 0
+    &:nth-child(2), &:nth-child(3)
+      top: 0.375rem
+    &:nth-child(4)
+      top: 0.75rem
+
+.header__button
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  height: 3.125rem
+  width: 3.125rem
+  cursor: pointer
+  -webkit-box-ordinal-group: 4
+  -ms-flex-order: 3
+  order: 3
+  margin-left: .9375rem
+  border: .0625rem solid #f5f5f5
+  border-radius: 50%
+
+@media (max-width: 768px)
+  .header__button
+    border: none
+    border-radius: 0
+    margin-right: 0.3rem
+
+.header__button--open span
+  &:first-child
+    width: 0
+    left: 50%
+  &:nth-child(2)
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+  &:nth-child(3)
+    -webkit-transform: rotate(-45deg)
+    -ms-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+  &:nth-child(4)
+    width: 0
+    left: 50%
+
+.nav__item
+  display: inline-block
+
+.nav__link
+  text-decoration: none
+  padding: 0 .9375rem
+  color: #232323
+  font-size: 1.125rem
+  line-height: 1.3125rem
+  -webkit-transition: color .2s
+  -o-transition: color .2s
+  transition: color 0.2s
+
+.nav__link--active, .nav__link:hover
+  color: #ff4c4e
+
+@media (max-width: 1279px)
+  .nav
+    display: none
+
+.nav-dropdown
+  position: absolute
+  top: 5.625rem
+  left: 0
+  width: 100%
+  background-color: #fff
+  opacity: 0
+  pointer-events: none
+  -webkit-transition: opacity .3s
+  -o-transition: opacity .3s
+  transition: opacity .3s
+  border-bottom: 1px solid #ececec
+
+.nav-dropdown__block-wrp
+  padding: 1.5625rem 5rem
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.nav-dropdown__img
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  position: relative
+  height: 6.25rem
+  width: 11.25rem
+  border-radius: .25rem
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50%
+  margin-bottom: 0.625rem
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: #000
+    opacity: .2
+    z-index: 4
+    -webkit-transition: opacity .3s
+    -o-transition: opacity .3s
+    transition: opacity 0.3s
+
+.nav-dropdown__img--curve-lines
+  background-color: #00c853
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    opacity: .3
+    background: url(/local/templates/jqestate/img/curve-lines-white.svg) no-repeat 50%
+    -webkit-transition: opacity .3s
+    -o-transition: opacity .3s
+    transition: opacity 0.3s
+  &:after
+    display: none
+
+.nav-dropdown__img-text
+  font-size: 2.25rem
+  font-weight: 500
+  line-height: 2.75rem
+  color: #fff
+
+.nav-dropdown__text
+  font-size: 1rem
+  line-height: 1.125rem
+  text-align: center
+  color: #232323
+  z-index: 5
+  -webkit-transition: color .3s
+  -o-transition: color .3s
+  transition: color 0.3s
+
+.nav-dropdown__item
+  position: relative
+  padding: 0 0.9375rem
+  &:hover
+    .nav-dropdown__text
+      color: #ff4c4e
+    .nav-dropdown__img:after
+      opacity: 0
+    .nav-dropdown__img--curve-lines:before
+      opacity: 0.1
+
+.nav-dropdown__link
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 10
+
+@media (max-width: 1279px)
+  .nav-dropdown
+    display: none
+
+.nav__item--hover .nav-dropdown
+  opacity: 1
+  pointer-events: visible

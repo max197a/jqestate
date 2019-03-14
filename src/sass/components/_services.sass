@@ -1,0 +1,86 @@
+// SERVICES BEGIN
+  
+.services
+  position: relative
+  z-index: 2
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &--reverse
+      flex-direction: row-reverse
+    &:last-child
+      p.description
+        margin-top: -60px
+  &__item
+    max-width: 560px
+    width: 48%
+    p
+      font-size: 16px
+      line-height: 1.5
+      color: #464646
+      margin-top: 45px
+      padding-left: 40px
+      position: relative
+      width: 90%
+      img
+        position: absolute
+        width: 20px
+        height: auto
+        left: 0
+        top: 3px
+
+      &.title
+        font-size: 24px
+        padding-left: 0
+        margin-top: -40px
+      &.description
+        padding-left: 0
+
+  &__image
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+
++r($desktop)
+  .services
+    &__item
+      p
+        margin-top: 25px
+        width: 100%
+        font-size: 15px
+    &__grid
+      &:last-child
+        p.description
+          margin-top: 0px
+
++r($tablet)
+  .services
+    &__grid
+      flex-wrap: wrap
+      &--reverse
+        flex-direction: row
+        padding-top: 44px
+      &:last-child
+        p.description
+          margin-top: 23px
+    &__item
+      width: 100%
+      max-width: 100%
+      p
+        margin-top: 24px
+        font-size: 16px
+        padding-left: 25px
+        width: 90%
+        img
+          width: 17px
+          left: -1px
+        &.description
+          margin-top: 15px
+          padding-bottom: 6px
+        &.title
+          margin-top: 27px
+          font-size: 20px
+
+// SERVICES END

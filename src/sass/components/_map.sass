@@ -1,0 +1,133 @@
+// MAP BEGIN
+  
+.map
+  position: relative
+  &__container
+    font-size: 0
+    padding: 0 40px
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    position: relative
+    transition: all .25s ease-in-out
+    max-height: 3000px
+    overflow: hidden
+    img
+      width: 100%
+      max-width: 1740px
+      margin: 35px auto
+      &.mobile
+        display: none
+    p
+      position: absolute
+      max-width: 1080px
+      width: 100%
+      padding: 0 40px
+      text-align: right
+      left: 50%
+      transform: translateX(-50%)
+      top: 96px
+      text-transform: uppercase
+      font-weight: 700
+      color: #464646
+      z-index: 2
+      font-size: 26px
+      letter-spacing: 2px
+      &.info
+        display: none
+  &__link
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    z-index: 2
+    margin-top: 0
+    min-width: 240px
+    text-align: center
+    span.hide
+      display: none
+    span.open
+      display: inline-block
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      left: 50%
+      transform: translateX(-50%)
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #ff4c4e
+      z-index: -1
+      bottom: -20px
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      left: 50%
+      transform: translateX(-50%) rotate(45deg)
+      width: 7px
+      height: 7px
+      border: 3px solid #fff
+      bottom: -12px
+      border-right: none
+      border-bottom: none
+      transition: all .25s ease-in-out
+    &:hover
+      &:before
+        background-color: #f24345
+  &.closed
+    .map__container
+      max-height: 0
+    .map__link
+      &:after
+        bottom: -10px
+        transform: translateX(-50%) rotate(-135deg)
+    span.open
+      display: none
+    span.hide
+      display: inline-block
+
++r($desktop)
+  .map
+    &__container
+      p
+        top: 50px
+        font-size: 24px
+
++r($tablet)
+  .map
+    padding-top: 15px
+    &__container
+      background: #fff !important
+      padding: 0 20px
+      p
+        position: static
+        top: 0
+        transform: translateX(0)
+        width: 100%
+        padding: 0 20px
+        text-align: center
+        &.info
+          display: block
+          text-align: left
+          font-weight: 400
+          color: #000
+          font-size: 13px
+          text-transform: none
+          max-width: 160px
+          letter-spacing: 0.4px
+          margin-top: -15px
+      img
+        display: none
+        margin: 0 auto
+        &.mobile
+          display: block
+          margin-top: 30px
+          width: 106%
+    &__link
+      display: none
+
+// MAP END

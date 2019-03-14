@@ -4,9 +4,294 @@ title: jqestate
 extends shared/_layout
 block content
 
-  // BEGIN SECTION :: filter
+  // BEGIN SECTION :: firstscreen
 
-  section.filter
+  section.firstscreen(style="background-image: url(img/bg-main.jpg)")
+    h1 О компании
+    a.button.button--red(href="#") Связаться с экспертом
+
+  // END SECTION :: firstscreen
+
+  // BEGIN SECTION :: misson
+
+  section.mission
     .container
+      .mission__grid
+        .mission__left
+          p Миссия компании — предоставлять 
+            span экспертизу
+            br
+            |  и лучший 
+            span сервис
+            br
+            |  по продаже и аренде недвижимости
+        .mission__right
+          p 
+            span Экспертиза 
+            |  — за 13 лет работы мы накопили огромную базу знаний и действительно разбираемся в рынке. Мы знаем историю большинства домов от котлована до отделки. Мы знаем нюансы и детали, о которых не напишут в открытых источниках при продаже дома или земли. Каждый поселок и дом уникален и мы знаем, 
+          p 
+            span Сервис  
+            |  — мы делаем процесс выбора и покупки комфортным и легким. Брокер — ваш экспертный советник. Все наши брокеры отлично знают рынок и поделяться с вами своими знаниями, помогут уточнить исходные требования к дому и предложат действительно лучшие варианты в желаемом бюджете.
 
-  // END SECTION :: main
+  // END SECTION :: misson
+
+  // BEGIN SECTION :: points
+
+  section.points(style="background-image: url(img/bg-vector.jpg)")
+    .container
+      .points__grid(js-mobile-slider)
+        .points__item
+          p Более
+          p.bold 13
+          p.info лет мы реализуем объекты, приоритетно на Рублёво- Успенском и Новорижском направлении
+        .points__item
+          p Более
+          p.bold 50
+          p.info спроектированных и построенных домов в портфолио JQ Estate 
+        .points__item
+          p Более
+          p.bold 1000
+          p.info успешно закрытых сделок по продаже и аренде премиальной загородной недвижимости
+
+  // END SECTION :: points
+
+  // BEGIN SECTION :: specialization
+
+  section.special
+    .container
+      h2 Наша специализация — элитная недвижимость и земельные участки на Рублёво-Успенском и Новорижском шоссе
+    .special__slider(js-slider)
+      .special__item
+        .special__image
+          img(src="img/item-1.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $150 000 000
+      .special__item
+        .special__image
+          img(src="img/item-2.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+      .special__item
+        .special__image
+          img(src="img/item-3.jpg", alt="")
+          p Поселке «Сады Майендорф», 
+            span $50 000
+      .special__item
+        .special__image
+          img(src="img/item-4.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+      .special__item
+        .special__image
+          img(src="img/item-5.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+      .special__item
+        .special__image
+          img(src="img/item-6.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+      .special__item
+        .special__image
+          img(src="img/item-7.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+      .special__item
+        .special__image
+          img(src="img/item-8.jpg", alt="")
+          p Дом в поселке «Сады Майендорф», 
+            span $50 000 000
+
+  // END SECTION :: specialization
+
+  // BEGIN SECTION :: map
+
+  section.map
+    a.map__link.button.button--red(href="#" js-map-button)
+      span.open Скрыть 
+      span.hide Показать всю 
+      |  карту
+    .map__container(style="background-image: url(img/map-bg.png)")
+      p Регион присутствия
+      img(src="img/map.png", alt="")
+      img.mobile(src="img/map-mobile.png", alt="")
+      p.info Рублёво-Успенское и Новорижское направление
+
+  // END SECTION :: map
+
+  // BEGIN SECTION :: history
+
+  section.history
+    .container
+      .history__grid
+        .history__item
+          .history__image
+            img(src="img/history.jpg", alt="")
+        .history__item
+          p В 2006 году была создана компания JQ Estate как агентство элитной недвижимости, и в 2018 году она была преобразована в JQ Estate Build&Sale, соединив в себе компетенции девелоперского, строительного и агентского бизнеса.
+          p В настоящее время JQ Estate Build&Sale является девелоперской структурой, которая создаёт и подбирает качественную и ликвидную элитную недвижимость преимущественно на Рублёво-Успенском и Новорижском направлениях.
+          p Мы рассматриваем объекты с функциональной позиции, продумывая планирование и зонирование помещений, а также с экспертной, вырабатывая чёткое понимание того, какие объекты будут выгодны как владельцам девелоперских проектов, так и собственникам частной недвижимости.
+
+  // END SECTION :: history
+
+  // BEGIN SECTION :: partners
+
+  section.partners
+    .container
+      .partners__grid
+        .partners__build
+          img(src="img/build-sale.jpg", alt="")
+        .partners__info
+          p JQ Estate Build&Sale имеет надёжного стратегического партнёра – строительную компанию WANDERBUILD, которая на протяжении 12 лет воплощает в жизнь проекты загородных резиденций, частных домов, а также премиальных коммерческих объектов. WANDERBUILD соединяет в себе компетенций строительного, девелоперского и агентского бизнеса.
+        .partners__logo
+          img(src="img/wanderbuild.png", alt="")
+
+      .partners__images
+        .partners__images-grid
+          .partners__images-item
+            .partners__image
+              img(src="img/project-1.jpg", alt="")
+          .partners__images-item
+            .partners__image
+              img(src="img/project-2.jpg", alt="")
+
+      .partners__information
+        p Одними из новых проектов Группы компаний являются концептуальные жилые дома 
+          span AQUARUIS 
+          |  и LIBRA, которые реализуются на Рублёво-Успенском шоссе. 
+        p Портфолио Группы компаний насчитывает более 100 спроектированных и построенных домов и более 1000 успешно закрытых сделок по продаже и аренде премиальной загородной недвижимости.
+  
+  // END SECTION :: partners
+
+  // BEGIN SECTION :: services
+
+  section.services
+    .container
+      .services__grid
+        .services__item
+          .services__image
+            img(src="img/service-1.jpg", alt="")
+        .services__item
+          p.title К услугам наших клиентов:
+          p.description Индивидуально подобранный пул профильных специалистов топ-уровня для каждой сделки:
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Персональный эксперт в области загородной недвижимости;
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Компетентный юрист, сопровождающий сделку;
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Высококлассная команда архитекторов и дизайнеров от WANDERBUILD.
+
+      .services__grid.services__grid--reverse
+        .services__item
+          .services__image
+            img(src="img/service-2.jpg", alt="")
+        .services__item
+          p.description Комфортные условия для переговоров в нашем особняке, расположенном на центральной площади посёлка Жуковка:
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Летняя терраса с уютной Lounge-зоной;
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Моментальный консьерж-сервис от ресторана MARIO;
+          p 
+            img(src="img/logotype.svg", alt="")
+            | Детская зона.
+
+  // END SECTION :: services
+
+  // BEGIN SECTION :: hours
+
+  section.hours
+    .container
+      .hours__grid
+        p.bold 24
+          span /7
+        p Мы работаем 24/7 в самом центре светской жизни Рублёво-Успенского шоссе и непременно организуем всё необходимое для встречи в удобное для Вас время!
+
+  // END SECTION :: hours
+
+  // BEGIN SECTION :: office
+
+  section.office
+    .office__full-image
+      img(src="img/office.jpg", alt="")
+    .container
+      .office__grid
+        .office__item
+          .office__image
+            img(src="img/office-1.jpg", alt="")
+            p.desktop-hidden Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+        .office__item
+          .office__item-info
+            p В команде JQ Estate Build&Sale работают и творят исключительно профессионалы своего дела, которые исполняют мечты наших клиентов качественно и в срок, благодаря высокому уровню экспертизы, накопленному за многие годы работы.
+            p.mobile-hidden Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+      .office__grid.office__grid--reverse
+        .office__item
+          .office__image
+            img(src="img/office-2.jpg", alt="")
+        .office__item
+          .office__item-info
+            p Неоспоримым преимуществом JQ Estate Build&Sale является компетенция нашего опытного корпоративного юриста, который анализирует риски приобретения недвижимости, сопровождает сделки с гарантией регистрации, подготавливает разрешительную документацию на строительство, а также предоставляет иные комплексные услуги для бизнеса.
+
+  // END SECTION :: office
+
+  // BEGIN SECTION :: team
+
+  section.team
+    //- .container
+    p.team__title команда
+    .team__slider(js-slider-team)
+      .team__slide
+        .team__item
+          .team__image
+            .team__image-container
+              img(src="img/team-1.jpg", alt="")
+          .team__info
+            .team__info-container
+              p.title Михаил Шестов
+              p.description Агент загородной недвижимости JQ Estate Build&Sale
+              p.info Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+      .team__slide
+        .team__item
+          .team__image
+            .team__image-container
+              img(src="img/team-2.jpg", alt="")
+          .team__info
+            .team__info-container
+              p.title Николай Ткаченко
+              p.description Агент загородной недвижимости JQ Estate Build&Sale 
+              p.info Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+              .team__info-contact
+                a.phone(href="#")
+                  .link-image
+                    img(src="img/icon-phone.svg", alt="") 
+                  | +7 903 123 45 67
+                a.whatsapp(href="#") 
+                  .link-image
+                    img(src="img/icon-whatsapp.svg", alt="") 
+                  | Написать в Whatsapp
+      .team__slide
+        .team__item
+          .team__image
+            .team__image-container
+              img(src="img/team-3.jpg", alt="")
+          .team__info
+            .team__info-container
+              p.title Олег Днепровский
+              p.description Старший агент загородной недвижимости JQ Estate Build&Sale 
+              p.info Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+      .team__slide
+        .team__item
+          .team__image
+            .team__image-container
+              img(src="img/team-4.jpg", alt="")
+          .team__info
+            .team__info-container
+              p.title Михаил Шестов 
+              p.description Агент загородной недвижимости JQ Estate Build&Sale 
+              p.info Наши агенты отличаются исключительным профессионализмом и персональным подходом к каждому клиенту, что позволяет экономить ценное время в процессе оформления сделки.
+
+  // END SECTION :: team

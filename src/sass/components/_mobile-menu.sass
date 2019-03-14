@@ -1,0 +1,103 @@
+// MOBILE MENU BEGIN
+  
+.v-nav
+  margin-left: auto
+  height: calc(100% - 5.625rem)
+  margin-top: 5.625rem
+  background-color: #fff
+  -webkit-transform: translate(100%)
+  -ms-transform: translate(100%)
+  transform: translate(100%)
+  padding: 1.875rem
+  width: 21.25rem
+  -webkit-transition: -webkit-transform .3s ease-in-out
+  transition: -webkit-transform .3s ease-in-out
+  -o-transition: transform .3s ease-in-out
+  transition: transform .3s ease-in-out
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out
+
+@media (max-width: 1279px)
+  .v-nav
+    height: calc(100% - 5rem)
+    margin-top: 5rem
+
+@media (max-width: 768px)
+  .v-nav
+    // height: calc(100% - 3.125rem)
+    // margin-top: 3.125rem
+    height: 100%
+    margin-top: 0
+    width: 100%
+    padding: 3.125rem 1.25rem 1.25rem 1.25rem
+
+.v-nav--visible
+  -webkit-transform: translate(0)
+  -ms-transform: translate(0)
+  transform: translate(0)
+
+.v-nav__item:not(:last-child)
+  padding-bottom: 1.875rem
+
+.v-nav__item--mobile
+  display: none
+  padding-top: 1.875rem
+  // /*border-top:.0625rem solid #ececec
+
+@media (max-width: 1279px)
+  .v-nav__item--mobile
+    display: block
+
+.v-nav__link
+  display: block
+  padding-left: 1.5625rem
+  color: #232323
+  font-size: 1rem
+  line-height: 1rem
+  text-decoration: none
+  -webkit-transition: color .2s ease-in-out
+  -o-transition: color .2s ease-in-out
+  transition: color .2s ease-in-out
+  position: relative
+  width: 10rem
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+  &:hover
+    color: #ff4c4e
+.v-nav__button-wrp
+  display: none
+
+@media (max-width: 768px)
+  .v-nav__button-wrp
+    position: absolute
+    bottom: 1.25rem
+    left: 1.25rem
+    width: calc(100% - 2.5rem)
+    display: block
+
+.v-nav__button
+  width: 100%
+  max-width: 280px
+  text-align: center
+
+.v-nav-overlay
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 4
+  background-color: rgba(0, 0, 0, 0.1)
+  opacity: 0
+  pointer-events: none
+  -webkit-transition: opacity .3s ease-in-out
+  -o-transition: opacity .3s ease-in-out
+  transition: opacity 0.3s ease-in-out
+
+.v-nav-overlay--visible
+  opacity: 1
+  pointer-events: visible
+
+a.v-nav__linc_selected
+  color: red
+
+// MOBILE MENU END

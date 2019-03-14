@@ -1,0 +1,41 @@
+// FIRSTSCREEN BEGIN
+  
+.firstscreen
+  min-height: calc(100vh - 90px)
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 120px 0 180px
+  position: relative
+  h1
+    text-transform: uppercase
+    font-size: 48px
+    color: #fff
+    letter-spacing: 2px
+    margin-top: -14px
+  .button
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 97px
+
++r($tablet)
+  .firstscreen
+    min-height: 1px
+    padding: 200px 20px 35px
+    flex-direction: column
+    background-position: left -70px center
+    h1
+      font-size: 32px
+      margin: 0
+    .button
+      position: static
+      transform: translateX(0)
+      bottom: 0
+      margin-top: 47px
+
+// FIRSTSCREEN END
