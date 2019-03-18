@@ -5,15 +5,10 @@ $(document).ready(function() {
 
   var _window = $(window);
   var _document = $(document);
-  var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing for anime.js
-  var lastClickEl;
 
   ////////////
   // READY - triggered when PJAX DONE
   ////////////
-
-  // single time initialization
-  _window.on("resize", debounce(setBreakpoint, 200));
 
   function pageReady() {
     initSlider();
@@ -95,39 +90,60 @@ $(document).ready(function() {
   ////////////////////
 
   function initSlider() {
-    $("[js-slider]").slick({
-      dots: false,
-      arrows: false,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      centerMode: true,
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      speed: 500,
-      responsive: [
-        {
-          breakpoint: 1068,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
+    // $("[js-slider]").slick({
+    //   dots: false,
+    //   arrows: false,
+    //   infinite: true,
+    //   autoplay: true,
+    //   autoplaySpeed: 5000,
+    //   pauseOnHover: false,
+    //   pauseOnFocus: false,
+    //   centerMode: true,
+    //   slidesToShow: 5,
+    //   slidesToScroll: 1,
+    //   speed: 500,
+    //   responsive: [
+    //     {
+    //       breakpoint: 1068,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 788,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         infinite: true,
+    //         dots: true,
+    //         centerMode: false
+    //       }
+    //     }
+    //   ]
+    //   // fade: true,
+    //   // cssEase: "linear"
+    // });
+
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 5,
+      spaceBetween: 0,
+      loop: true,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        1068: {
+          slidesPerView: 3,
+          spaceBetween: 0
         },
-        {
-          breakpoint: 788,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-            centerMode: false
-          }
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0
         }
-      ]
-      // fade: true,
-      // cssEase: "linear"
+      }
     });
 
     $("[js-slider-team]").slick({
@@ -208,26 +224,4 @@ $(document).ready(function() {
       }
     });
   });
-
-  //////////
-  // DEVELOPMENT HELPER
-  //////////
-  function setBreakpoint() {
-    var wHost = window.location.host.toLowerCase();
-    var displayCondition =
-      wHost.indexOf("localhost") >= 0 || wHost.indexOf("surge") >= 0;
-    if (displayCondition) {
-      var wWidth = _window.width();
-
-      var content = "<div class='dev-bp-debug'>" + wWidth + "</div>";
-
-      $(".page").append(content);
-      setTimeout(function() {
-        $(".dev-bp-debug").fadeOut();
-      }, 1000);
-      setTimeout(function() {
-        $(".dev-bp-debug").remove();
-      }, 1500);
-    }
-  }
 });

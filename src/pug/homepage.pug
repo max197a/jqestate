@@ -60,53 +60,55 @@ block content
   section.special
     .container
       h2 Наша специализация — элитная недвижимость и земельные участки на Рублёво-Успенском и Новорижском шоссе
-    .special__slider(js-slider)
-      .special__item
-        .special__image
-          img(src="img/item-1.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $150 000 000
-      .special__item
-        .special__image
-          img(src="img/item-2.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
-      .special__item
-        .special__image
-          img(src="img/item-3.jpg", alt="")
-          p Поселке «Сады Майендорф», 
-            span $50 000
-      .special__item
-        .special__image
-          img(src="img/item-4.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
-      .special__item
-        .special__image
-          img(src="img/item-5.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
-      .special__item
-        .special__image
-          img(src="img/item-6.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
-      .special__item
-        .special__image
-          img(src="img/item-7.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
-      .special__item
-        .special__image
-          img(src="img/item-8.jpg", alt="")
-          p Дом в поселке «Сады Майендорф», 
-            span $50 000 000
+    .special__slider.swiper-container(js-slider)
+      .swiper-wrapper
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-1.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $150 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-2.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-3.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Поселке «Сады Майендорф», 
+              span $50 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-4.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-5.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-6.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-7.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+        .special__item.swiper-slide
+          .special__image
+            img(src="img/item-8.jpg", alt="")
+            a(href="https://www.google.com/" target="_blank") Дом в поселке «Сады Майендорф», 
+              span $50 000 000
+      .swiper-pagination
 
   // END SECTION :: specialization
 
   // BEGIN SECTION :: map
 
-  section.map
+  section.map.closed
     a.map__link.button.button--red(href="#" js-map-button)
       span.open Скрыть 
       span.hide Показать всю 
@@ -157,7 +159,8 @@ block content
 
       .partners__information
         p Одними из новых проектов Группы компаний являются концептуальные жилые дома 
-          span AQUARUIS 
+          span 
+            a(href="http://www.11house.ru/" target="_blank") AQUARUIS 
           |  и LIBRA, которые реализуются на Рублёво-Успенском шоссе. 
         p Портфолио Группы компаний насчитывает более 100 спроектированных и построенных домов и более 1000 успешно закрытых сделок по продаже и аренде премиальной загородной недвижимости.
   

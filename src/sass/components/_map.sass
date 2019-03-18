@@ -80,7 +80,7 @@
         background-color: #f24345
   &.closed
     .map__container
-      max-height: 0
+      max-height: 215px
     .map__link
       &:after
         bottom: -10px
@@ -129,5 +129,8 @@
           width: 106%
     &__link
       display: none
+    &.closed
+      .map__container
+        max-height: 1000px
 
 // MAP END
